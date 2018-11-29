@@ -10,7 +10,7 @@
 </div>
 
 <div class="sidenav-divider m-0" style="padding: 10px" align="center">
-<div>COINS</div> <i class="fas fa-coins text-warning"></i> <b class="text-success"> <?=$system_user[0]['user_points'] ?> </b>
+<div>MOEDAS</div> <i class="fas fa-coins text-warning"></i> <b class="text-success"> <?=$system_user[0]['user_points'] ?> </b>
 </div>
 
 <!-- Links -->
@@ -20,19 +20,25 @@
 
   <li class="sidenav-item active">
     <a href="inicio" class="sidenav-link">
-      <div>INICIO</div>
+      <i class="sidenav-icon far fa-comments"></i><div>INICIO</div>
     </a>
   </li>
 
   <li class="sidenav-item">
     <a href="configuracoes" class="sidenav-link">
-      <div>CONFIGURAÇÕES</div>
+      <i class="sidenav-icon fas fa-cog"></i><div>CONFIGURAÇÕES</div>
+    </a>
+  </li>
+
+    <li class="sidenav-item">
+    <a href="configuracoes" class="sidenav-link">
+      <i class="sidenav-icon far fa-thumbs-up"></i><div>VOTAÇÃO</div>
     </a>
   </li>
 
     <li class="sidenav-item">
     <a href="perguntas_status" class="sidenav-link">
-      <div>PEGUNTAS STATUS</div>
+      <i class="sidenav-icon fas fa-stream"></i><div>PEGUNTAS STATUS</div>
     </a>
   </li>
 

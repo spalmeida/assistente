@@ -1,3 +1,10 @@
+<?php 
+
+$pergunta = $busca->Fetchall("perguntas");
+
+
+ ?>
+
 <div class="layout-content">
 
           <!-- Content -->
@@ -14,22 +21,36 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>USER</th>
-                      <th>PERGUNTA</th>
-                      <th>RESPOSTA</th>
+                      <th>Pergunta</th>
+                      <th>Resposta</th>
+                      <th>Status</th>
                       <th>STATUS</th>
                       <th>VER</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="odd gradeX">
+                    <?php foreach ($pergunta as $value) { 
+                      $pergunta_id = $value['id'];
+                      $resposta = $busca->select("respostas", "resposta_pergunta_id = '$pergunta_id'")
+                      ?>
+                      <tr class="odd gradeX">
+                      <td><?=$value['id'] ?></td>
+                      <td><?=$value['pergunta_name'] ?></td>
+                      <?php 
+
+                      if(!empty($resposta)){
+                        echo "<td>".$resposta[0]['resposta_name']."</td>";
+                      }else{
+                        echo '<td align="center" class="text-danger">NÃO RESPONDIDA</td>';
+                      }
+
+                      ?>
+                      <td><?=$value['pergunta_status'] ?></td>
                       <td>Trident</td>
                       <td>Trident</td>
-                      <td>Trident</td>
-                      <td>Trident</td>
-                      <td>Trident</td>
-                      <td>Trident</td>
-                    </tr>
+                      </tr>
+                      <?php } ?>
+                    
                   </tbody>
                 </table>
               </div>

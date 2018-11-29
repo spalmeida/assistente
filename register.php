@@ -73,24 +73,30 @@ $busca->VerifyLogin();
             </div>
             <!-- / Logo -->
 
-            <h5 class="text-center text-muted font-weight-normal mb-4">INFORME SEUS DADOS</h5>
+            <h5 class="text-center text-muted font-weight-normal mb-4">Ual !!! <p>Não vejo a hora de nos conhecermos.</p></h5>
 
             <!-- Form -->
             <form action="exe/verify.php" method="post">
               <div class="form-group">
-                <label class="form-label">Email</label>
+                <label class="form-label">Informe seu Email</label>
                 <input required type="email" name="user_mail" id="user_mail" class="form-control">
               </div>
               <div class="form-group">
                 <label class="form-label d-flex justify-content-between align-items-end">
-                  <div>Senha</div>
+                  <div>Informe sua Senha</div>
+                </label>
+                <input required name="user_pass" id="user_pass" type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <label class="form-label d-flex justify-content-between align-items-end">
+                  <div>Repita a senha (Casualidades...hehe) </div>
                 </label>
                 <input required name="user_pass" id="user_pass" type="password" class="form-control">
               </div>
               <div class="d-flex justify-content-between align-items-center m-0">
                 <label class="custom-control custom-checkbox m-0">
                 </label>
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit" class="btn btn-success">Finalizar Cadastro</button>
               </div>
             </form>
             <!-- / Form -->
@@ -98,7 +104,7 @@ $busca->VerifyLogin();
           </div>
           <div class="card-footer py-3 px-4 px-sm-5">
             <div class="text-center text-muted">
-              Não tem uma conta ainda? <a href="register.php">Criar Conta</a>
+              Já tem uma conta? <a href="login.php">Login</a>
             </div>
           </div>
         </div>

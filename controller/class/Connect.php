@@ -1,13 +1,22 @@
 <?php 
 
+/*
+|
+| Desenvolvedor: Samuel Prado almeida
+| email: samuelprado.a@gmail.com
+| GitHub: https://github.com/siglanero
+| repositório: https://github.com/siglanero/controller
+|
+*/
+
 class Connect{
 
 	public $conn;
-//==============================================================================
 
-		//MÉTODO MÁGICO CONEXÃO COM O BANCO DE DADOS PARA CHAMA-LO BASTA USAR
-		//$var = new Connect("HOSTNAME","DBNAME","USER","PASS");
 
+//MÉTODO MÁGICO CONEXÃO COM O BANCO DE DADOS PARA CHAMA-LO BASTA USAR
+//$var = new Connect("HOSTNAME","DBNAME","USER","PASS");
+//CONSTRUCT ====================================================================		
 	function __construct($host,$dbname,$user,$pass){
 		try {
 			$this->conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass, array(
@@ -17,10 +26,11 @@ class Connect{
 		} catch(PDOException $e) {
 			echo 'ERROR: ' . $e->getMessage();
 		}
-		}//FIM DO CONSTRUCT
-		
+		}//FIM DO CONSTRUCT		
 //==============================================================================
 
+
+//MÉTODO DATA===================================================================		
 		public	function Data($select,$type){
 			
 			if($type == 'fetch'){
@@ -37,59 +47,37 @@ class Connect{
 				$select = $this->conn->prepare($select);
 				return $select->execute();
 			}
-		}			
+		}
+//==============================================================================
+
+
+//MÉTODO SELECT=================================================================		
 		public function select($table, $where){
 			$select = "SELECT * FROM $table WHERE $where ";
 			return Connect::Data($select,"fetchAll"); 
 		}
+//==============================================================================
 
-		public function selectDefault($table,$column, $where){
-			$select = "SELECT $column FROM $table WHERE $where ";
-			return Connect::Data($select,"fetchAll"); 
-		}
 
+//MÉTODO FETCHALL===============================================================		
 		public function FetchAll($value){
 
 			$select = "SELECT * FROM $value";
 			return Connect::Data($select,"fetchAll");	 
 		}
+//==============================================================================
 
-		public function FetchWhere($value, $where){
 
-			$select = "SELECT * FROM $value WHERE $where";
-			return Connect::Data($select,"fetchAll");	 
-		}
-
-		//É POSSÍVEL COLOCAR UMA QUERY INTEIRA SEM DINÂMICA "não recomendado"
-		public function FetchDefault($value){
-
-			$select = "$value";
-			return Connect::Data($select,"fetchAll");	 
-		}
-
+//MÉTODO MAGICFETCH=============================================================		
 		public function magicFetch($value){
 
 			$select = "SELECT * FROM $value order by str_to_date(date, '%d/%m/%Y') ASC";
 			return Connect::Data($select,"fetchAll");	 
 		}
-
-		public function MagicSelect($table){
-
-			$select = "DESCRIBE $table";
-			return Connect::Data($select,"fetchAll");	 
-		}
-
-		function RemoveAcento($string){
-
-			$remover_separador = str_replace(" ", "_", $string); 
-			$nome = strtolower(preg_replace( '/[`^~\'"]/', null, iconv( 'UTF-8', 'ASCII//TRANSLIT', $remover_separador ) ));
-
-			return utf8_encode($nome);
-		}	
-
 //==============================================================================
 
-//IDENTIFICAÇÃO DE TABELAS ]=====================================================
+
+//IDENTIICAÇÃO DE TABELAS ]=====================================================        
 		public function Tables($table){	
 
 			$search=Connect::MagicSelect($table);
@@ -105,6 +93,9 @@ class Connect{
 			return $result;
 		}
 //==============================================================================
+
+
+//MÉTODO QUERY==================================================================		
 		public function Query($table, $array, $type, $where){
 		//$table = RECEBE O NOME DA TABELA
 		//$array = RECEBE UM ARRAY COM OS DADOS A SEREM INSERIDOS
@@ -181,13 +172,16 @@ class Connect{
 					$stmt->bindParam($fieldAarray[$i], $array[$fieldBarray[$i]]);
 				}
 
-				return $stmt->execute();
+				$stmt->execute();
 			}
 
 			return;	
 
 		}
+//==============================================================================
 
+
+//MÉTODO DELETE=================================================================		
 		public function Delete($table ,$id){
 
 			$stmt = $this->conn->prepare("DELETE FROM $table WHERE id = :ID");
@@ -196,11 +190,14 @@ class Connect{
 
 			return;
 		}
+//==============================================================================
+		
 
+//MÉTODO RAND ==================================================================        
 		public function Rand($value){
 		//$value RECEBE A QUANTIDADE DE CARACTERES
 
-			$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVXWYZ0123456789+_-'; 
+			$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVXWYZ0123456789'; 
 			$qtd_characters = strlen($characters); 
 			$hash=NULL; 
 			for($x=1;$x<=$value;$x++){ 
@@ -210,23 +207,19 @@ class Connect{
 
 			return $hash;
 		}/* FIM DO MÉTODO Rand()*/
+//==============================================================================
 
-		public function FileUpload($array, $format, $type, $sub){
+
+//MÉTODO FILEUPLOAD=============================================================		
+		public function FileUpload($array, $format, $type){
 
 			//$array = RECEBE UM ARRAY DO ARQUIVO
 			//$format = RECEBE O TIPO DE ARQUIVO QUE VAI CHEGAR
 			//$type = RECEBE O NOME DO DIRETÓRIO PARA ONDE SERÁ ENVIADO O ARQUIVO
-			//$sub = USADO PARA REFERENCIA DE SUBPASTA PARA ONDE O ARQUIVO SERÁ ENVIADO
 
-			$new_type_1[] = explode(".", $array['name']);
-			$new_type[] = end($new_type_1[0]);
-
-			$file_type = $new_type[0];
 			//FORMATOS PERMITIDOS PARA UPLOADS DE IMAGEM
 			if($format == "imagem"){
-				$format_type = array('jpg', 'png', 'jpeg');
-			}elseif($format == "task"){
-				$format_type = array('zip','pdf','gif','docx','pptx','xlsx','xls','jpg','txt','png','rar');
+				$format_type = array('image/jpg', 'image/png', 'image/jpeg');
 			}
 			//==========================================
 
@@ -237,23 +230,23 @@ class Connect{
 			//====================================================
 
 			//FAZ A VERIFICAÇÃO DA EXTENSÃO DO ARQUIVO
-			if(!empty($file_type)){
-				if (array_search($file_type, $format_type) === false){
+			if(!empty($archive[0]['type'])){
+				if (array_search($archive[0]['type'], $format_type) === false){
 					echo 'O tipo de arquivo enviado é inválido!';
 			//========================================
 
 				}else{
 
 			//VERIFICA SE HOUVE ALGUM ERRO NO ENVIO DO ARQUIVO
-					if($array["error"]){
+					if($archive[0]["error"]){
 						echo " Ops ocorreu um erro :( ";
 					}
 				}
 			//================================================
 
 				//DIRETÓRIO PARA ONDE IRÁ O ARQUIVO
-				$dirUploads = "..".DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR."UPLOADS/";
-				$dirType = "..".DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR."UPLOADS".DIRECTORY_SEPARATOR.$type. DIRECTORY_SEPARATOR.$sub;
+				$dirUploads = "../../../UPLOADS/";
+				$dirType = "../../../UPLOADS/".$type;
 				//===============================
 
 			//VERIFICA SE O DIRETÓRIO EXISTE, CASO NÃO EXISTA ELE CRIA
@@ -266,8 +259,15 @@ class Connect{
 				
 				foreach ($archive as $value) { /* INICIO FOREACH */
 
+			//REMOVE O VALOR "image/" QUE VEM DENTRO NO ARRAY "$archive"
+					if($format == "imagem"){	
+						$remove = "image/";
+					}
+					$rest = str_replace($remove, "", $value['type']);
+			//==========================================================
+
 				//$extension FICA APENAS O VALOR FINAL DA EXTENSÃO
-					$extension = ".".$file_type;
+					$extension = ".".$rest;
 				//================================================
 
 				//CRIA UM NOME PARA O ARQUIVO USANDO O MÉTODO "Rand()"
@@ -289,7 +289,7 @@ class Connect{
 
 					/* INICIO DO IF "move_uploaded_file" */
 			//ENVIA O ARQUIVO PARA O LOCAL INFORMADO
-					if(move_uploaded_file($array["tmp_name"], $path)){
+					if(move_uploaded_file($value["tmp_name"], $path)){
 			//ENVIA O ARQUIVO PARA O BANCO COM SUAS INFORMAÇÕES
 						$file_array = array(
 
@@ -300,10 +300,8 @@ class Connect{
 						);
 
 						return array(
-							'file_type' => $type,
-							'file_name' => $array['name'],
-							'file_directory' => $path,
-							'cripto_name' => $file_name
+							'name' => $type,
+							'name_file' => $file_name
 						);
 					}
 			//======================================
@@ -316,15 +314,10 @@ class Connect{
 			}
 
 		}/* FIM DO MÉTODO FileUpload() */
-		public function Validationtable($tab, $column, $info){
-			$select = Connect::select($tab,"$column LIKE '%$info%'");
-			if(empty($select)){
-				return false;
-			}else{
-				return true;
-			}
-		}
-		//MÉTODO PARA VALIDAR USUÁRIO
+//==============================================================================
+
+
+//MÉTODO PARA VALIDAR USUÁRIO===================================================		
 		public function Validation($table, $email, $pass){
 			session_destroy();
 			$select = Connect::select($table,"user_mail LIKE '%$email%' AND user_pass LIKE '%$pass%'");
@@ -343,7 +336,10 @@ class Connect{
 			}
 
 		}
+//==============================================================================
 
+
+//MÉTODO VERIFYUSER=============================================================		
 		public function VerifyUser(){
 
 			if(!empty($_SESSION['email'])){
@@ -354,47 +350,38 @@ class Connect{
 			}
 
  		}//FIM DO MÉTODO VerifyUser
+//==============================================================================
 
+
+//MÉTODO DATEINFO=============================================================== 		
  		public function DateInfo($value){
  			$date = new DateTime();
  			$day = $date->format("d"); // DIA
  			$month = $date->format("m"); //MÊS
  			$year = $date->format("y"); //APENAS OS DOIS ÚLTIMOS DIGÍTOS DO ANO
  			$fullYear = $date->format("Y");; //ANO COMPLETO
- 			$semana = date('w', time()); //NÚMERO DA SEMANA
- 			$mes = date('m', time()); //NÚMERO DOS MESES
- 			$dias_da_semana = Array("Domingo", "Segunda Feira", "Terça feira", "Quarta feira", "Quinta feira", "Sexta Feira", "Sábado");
- 			$meses_do_ano = Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
  			$s = " - "; //SEPARADOR
 
  			if($value == "1"){
- 				//Exemplo: 02 - 11 - 2018
+
  				$dateinfo = $day.$s.$month.$s.$fullYear;
 
- 			}elseif($value == "2"){
- 				//Exemplo: Sexta dia 02 de Dezembro de 2018
- 				$dateinfo = $dias_da_semana[$semana]." dia ".$day." de ".$meses_do_ano[$mes]." de ".$fullYear;
-
- 			}elseif($value == "3"){
- 				//Exemplo: Sexta
- 				$dateinfo = $dias_da_semana[$semana];
- 			}elseif($value == "4"){
- 				//Exemplo: 02
- 				$dateinfo = $day;
- 			}elseif($value == "5"){
- 				//Exemplo: 12
- 				$dateinfo = $month;
  			}
 
  			return $dateinfo;
  		}//FIM DO MÉTODO DateInfo
+//==============================================================================
 
- 		public function ConvertDate($date){
 
- 			$convert = str_replace("/", "-", $date);
- 			return date('d-m-Y', strtotime($convert));
+//MÉTODO PARA REMOVER ACENTUAÇÃO================================================		
+ 		public function RemoveAcento($text){
 
+ 			$remove = str_replace(" ", "_", $text); 
+ 			$name = strtolower(preg_replace( '/[`^~\'"]/', null, iconv( 'UTF-8', 'ASCII//TRANSLIT', $remove ) ));
+
+ 			return $name;
  		}
+//==============================================================================
 
  		public function VerifyLogin(){
  			if($_SESSION){
@@ -443,6 +430,8 @@ class Connect{
 
  			return;
  		}
+
+
 
  	}
 
