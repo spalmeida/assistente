@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <?php 
 require_once("controller/system.php");
 $busca->VerifySession();
 
 
  ?>
-<!DOCTYPE html>
+
 
 <html lang="en" class="default-style">
 
@@ -18,7 +19,7 @@ $busca->VerifySession();
   <meta name="author" content="SmartUniversity" />
 
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
 
   <!-- Icon fonts -->
@@ -103,7 +104,7 @@ $busca->VerifySession();
   <script src="assets/vendor/js/sidenav.js"></script>
   <script src="assets/vendor/js/theme-settings.js"></script>
   <script src="assets/vendor/js/pace.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 
     <!-- Libs -->
