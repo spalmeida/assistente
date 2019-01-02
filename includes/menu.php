@@ -3,7 +3,7 @@
   <!-- Brand demo (see assets/css/demo/demo.css) -->
   <div class="app-brand demo">
    <img src="assets/img/avatars/5.png" width="40px">
-   <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2"><?=$assistente[0]['assistente_name']; ?></a>
+   <a href="inicio" class="app-brand-text demo sidenav-text font-weight-normal ml-2"><?=$assistente[0]['assistente_name']; ?></a>
    <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
     <i class="ion ion-md-menu align-middle"></i>
   </a>
@@ -31,7 +31,7 @@
   </li>
 
     <li class="sidenav-item">
-    <a href="configuracoes" class="sidenav-link">
+    <a href="votacao" class="sidenav-link">
       <i class="sidenav-icon far fa-thumbs-up"></i><div>VOTAÇÃO</div>
     </a>
   </li>

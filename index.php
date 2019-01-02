@@ -19,7 +19,6 @@ $busca->VerifySession();
   <meta name="author" content="SmartUniversity" />
 
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
 
   <!-- Icon fonts -->
@@ -52,7 +51,7 @@ $busca->VerifySession();
   <link rel="stylesheet" href="assets/vendor/css/pages/chat.css">
   <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
   <link rel="stylesheet" href="assets/vendor/libs/spinkit/spinkit.css">
-
+  
 
 </head>
 
@@ -99,16 +98,17 @@ $busca->VerifySession();
   <!-- / Layout wrapper -->
 
     <!-- Core scripts -->
+
   <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
   <script src="assets/vendor/js/sidenav.js"></script>
   <script src="assets/vendor/js/theme-settings.js"></script>
   <script src="assets/vendor/js/pace.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
     <!-- Libs -->
   <script src="assets/vendor/libs/datatables/datatables.js"></script>
+  
   <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
   <script src="assets/vendor/libs/chartjs/chartjs.js"></script>
   <script src="assets/vendor/libs/numeral/numeral.js"></script>
