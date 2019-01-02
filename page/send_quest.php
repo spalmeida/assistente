@@ -13,11 +13,12 @@ if( isset($_POST['send_quest']) and isset($_POST['send_answer'])){
 	$resposta_name = $_POST['send_answer'];
 
 	$send_pergunta['pergunta_name']		=	$pergunta_name;
-	$send_pergunta['pergunta_type']		=	"";
-	$send_pergunta['pergunta_status']	=	"";
+	$send_pergunta['pergunta_type']		=	0;
+	$send_pergunta['pergunta_status']	=	0;
 	$send_pergunta['user_id']			=	$system_user['0']['id'];
-	$send_pergunta['like']				=	1;
-	$send_pergunta['deslike']			=	0;
+	$send_pergunta['aprovado']			=	1;
+	$send_pergunta['reprovado']			=	0;
+
 
 	if(empty($busca->select("perguntas", "pergunta_name = '$pergunta_name' "))){
 

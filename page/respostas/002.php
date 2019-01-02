@@ -7,10 +7,11 @@ $ultima_id_pergunta = end($pergunta_select_id);
 
 $send_resposta['resposta_name']				=	$resposta_name;
 $send_resposta['resposta_pergunta_id']		=	$ultima_id_pergunta['id'];
-$send_resposta['resposta_status']			=	"";
+$send_resposta['resposta_status']			=	0;
 $send_resposta['user_id']					=	$system_user['0']['id'];
-$send_resposta['like']						=	1;
-$send_resposta['deslike']					=	0;
+$send_resposta['aprovado']					=	1;
+$send_resposta['reprovado']					=	0;
+
 
 $busca->Query("respostas", $send_resposta , "insert", "");
 
