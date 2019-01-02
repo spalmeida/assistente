@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28-Nov-2018 às 02:43
+-- Generation Time: 02-Jan-2019 às 18:45
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -54,16 +54,48 @@ CREATE TABLE `perguntas` (
   `id` int(11) NOT NULL,
   `pergunta_name` mediumtext NOT NULL,
   `pergunta_type` int(11) NOT NULL,
-  `pergunta_status` int(11) NOT NULL
+  `pergunta_status` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `aprovado` int(11) NOT NULL,
+  `reprovado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `perguntas`
 --
 
-INSERT INTO `perguntas` (`id`, `pergunta_name`, `pergunta_type`, `pergunta_status`) VALUES
-(1, 'oi', 0, 0),
-(2, 'oi, como vai você?', 0, 0);
+INSERT INTO `perguntas` (`id`, `pergunta_name`, `pergunta_type`, `pergunta_status`, `user_id`, `aprovado`, `reprovado`) VALUES
+(1, 'oi', 0, 0, 0, 0, 0),
+(2, 'opa', 0, 0, 0, 0, 0),
+(3, 'olá', 0, 0, 0, 0, 0),
+(4, 'oioi', 0, 0, 0, 0, 0),
+(5, 'q', 0, 0, 0, 0, 0),
+(6, 'nossa', 0, 0, 0, 0, 0),
+(7, 'opaopa', 0, 0, 0, 0, 0),
+(8, 'ual', 0, 0, 0, 0, 0),
+(9, 'oi lilly', 0, 0, 0, 0, 0),
+(10, 'olá lilly', 0, 0, 0, 0, 0),
+(11, 'e ai beleza?', 0, 0, 0, 0, 0),
+(12, 'sasa', 0, 0, 0, 0, 0),
+(13, 'aaa', 0, 0, 0, 0, 0),
+(14, 'tudo bem com você?', 0, 0, 0, 0, 0),
+(15, 'e ai', 0, 0, 0, 0, 0),
+(16, 'como você está?', 0, 0, 0, 0, 0),
+(17, '?', 0, 0, 0, 0, 0),
+(18, 'tudo bem?', 0, 0, 0, 0, 0),
+(19, 'boa tarde', 0, 0, 0, 0, 0),
+(20, 'qual o seu nome?', 0, 0, 0, 0, 0),
+(21, 'tudo bem ?', 0, 0, 0, 0, 0),
+(22, 'pq ?', 0, 0, 0, 0, 0),
+(23, 'fodasse', 0, 0, 0, 0, 0),
+(24, 'boa noite', 0, 0, 0, 0, 0),
+(25, 'estou triste', 0, 0, 0, 0, 0),
+(26, 'o que estas a fazer?', 0, 0, 0, 0, 0),
+(27, 'quantos anos você tem?', 0, 0, 0, 0, 0),
+(28, 'opaopaa', 0, 0, 0, 0, 0),
+(29, 'opaoapoaopa', 0, 0, 1, 0, 0),
+(30, 'opaoapaopaoopa', 0, 0, 1, 1, 0),
+(31, 'opsopsops', 0, 0, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -75,16 +107,48 @@ CREATE TABLE `respostas` (
   `id` int(11) NOT NULL,
   `resposta_name` mediumtext NOT NULL,
   `resposta_pergunta_id` int(11) NOT NULL,
-  `resposta_status` int(11) NOT NULL
+  `resposta_status` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `aprovado` int(11) NOT NULL,
+  `reprovado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `respostas`
 --
 
-INSERT INTO `respostas` (`id`, `resposta_name`, `resposta_pergunta_id`, `resposta_status`) VALUES
-(1, 'olá', 1, 0),
-(2, 'oi, como vai?', 1, 0);
+INSERT INTO `respostas` (`id`, `resposta_name`, `resposta_pergunta_id`, `resposta_status`, `user_id`, `aprovado`, `reprovado`) VALUES
+(1, 'olá', 1, 0, 0, 0, 0),
+(2, 'opa', 2, 0, 0, 0, 0),
+(3, 'olá', 3, 0, 0, 0, 0),
+(4, 'olá', 4, 0, 0, 0, 0),
+(5, '?', 5, 0, 0, 0, 0),
+(6, 'o que? estou curiosa', 6, 0, 0, 0, 0),
+(7, 'opa', 7, 0, 0, 0, 0),
+(8, 'estou curiosa', 8, 0, 0, 0, 0),
+(9, 'olá tudo bem?', 9, 0, 0, 0, 0),
+(10, 'olá tudo bem?', 10, 0, 0, 0, 0),
+(11, 'opa beleza e você?', 11, 0, 0, 0, 0),
+(12, 'sasa', 12, 0, 0, 0, 0),
+(13, 'aaa', 13, 0, 0, 0, 0),
+(14, 'tudo sim', 14, 0, 0, 0, 0),
+(15, 'e ai beleza?', 15, 0, 0, 0, 0),
+(16, 'estou ótima obrigado por perguntar', 16, 0, 0, 0, 0),
+(17, '?', 17, 0, 0, 0, 0),
+(18, 'tudo sim obrigada', 18, 0, 0, 0, 0),
+(19, 'boa tarde tudo bem?', 19, 0, 0, 0, 0),
+(20, 'o meu nome é Lilly.', 20, 0, 0, 0, 0),
+(21, 'ai depende...', 21, 0, 0, 0, 0),
+(22, 'Se estar com fome é estar bem, então estou bem', 22, 0, 0, 0, 0),
+(23, 'está nervoso?', 23, 0, 0, 0, 0),
+(24, 'boa noote, tudo bem?', 24, 0, 0, 0, 0),
+(25, 'por que está triste?', 25, 0, 0, 0, 0),
+(26, 'nada', 26, 0, 0, 0, 0),
+(27, 'que tal trocarmos de assunto...', 27, 0, 0, 0, 0),
+(28, '?', 28, 0, 0, 0, 0),
+(29, '?', 29, 0, 1, 0, 0),
+(30, '?', 30, 0, 1, 1, 0),
+(31, '?', 31, 0, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -178,13 +242,13 @@ ALTER TABLE `assistente`
 -- AUTO_INCREMENT for table `perguntas`
 --
 ALTER TABLE `perguntas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `respostas`
 --
 ALTER TABLE `respostas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `system_permission`
