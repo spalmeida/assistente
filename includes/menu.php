@@ -10,7 +10,7 @@
 </div>
 
 <div class="sidenav-divider m-0" style="padding: 10px" align="center">
-<div>MOEDAS</div> <i class="fas fa-coins text-warning"></i> <b class="text-success"> <?=$system_user[0]['user_points'] ?> </b>
+<div>MOEDAS</div> <img src="assets/img/gold.png" width="20px"> <b class="text-success"> <?=$system_user[0]['user_points'] ?> </b>
 </div>
 
 <!-- Links -->

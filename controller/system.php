@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require_once("config.php");
 
@@ -11,7 +11,7 @@ function __autoload($class){
 //FAZ A CONEÇÃO COM O BANCO DE DADOS ====================================
 $busca = new Connect($localhost,$db,$user,$pass);
 if(!empty($_SESSION)){
-//DECLARA A ID DO USUÁRIO	
+//DECLARA A ID DO USUÁRIO
 $system_user_id = $_SESSION['user_id'];
 //DECLARA AS INFORMAÇÕES DO USUÁRIO
 $system_user = $busca->select("system_users", "id = $system_user_id");

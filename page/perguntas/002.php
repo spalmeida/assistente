@@ -2,17 +2,6 @@
 
 $dados['resposta'] = '
 
-		<div class="chat-message-right mb-4">
-		<div>
-		<img src="assets/img/avatars/1.png" class="ui-w-40 rounded-circle" alt>
-		<div class="text-muted small text-nowrap mt-2">'.$time.'</div>
-		</div>
-		<div class="flex-shrink-1 bg-lighter rounded py-2 px-3 mr-3">
-		<div class="font-weight-semibold mb-1">'.$user_name.'</div>
-		'.htmlspecialchars($quest).'
-		</div>
-		</div>
-
 		<div class="chat-message-left mb-4">
 		<div>
 		<img src="assets/img/avatars/assistente_red.png" class="ui-w-40 rounded-circle" alt>

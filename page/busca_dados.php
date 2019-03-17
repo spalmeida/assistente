@@ -17,9 +17,10 @@ $key = $busca->Rand(20);
 if (isset($_POST['quest'])) {
 
 	$quest = $_POST['quest'];
-
-	$pergunta = $busca->select("perguntas", "pergunta_name = '$quest'  order by rand() limit 1");
-
+//====================================
+	//aqui a assistente verifica se a pergunta existe no banco de dados
+	$pergunta = $busca->select("perguntas", "pergunta_name = '$quest'");
+//====================================
 	$dados['quest'] = $quest;
 
 //001 - QUANDO A PERGUNTAR NÃO EXISTIR
@@ -29,7 +30,7 @@ if (isset($_POST['quest'])) {
 //FIM - 001	
 
 //A PERGUNTA EXISTE ENTÃO ELA RETORNA UMA RESPOSTA ALEATÓRIA	
-}elseif($pergunta[0]['pergunta_name'] == $quest){
+}elseif($pergunta[0]['pergunta_name'] == $quest or $pergunta[0]['pergunta_name'] !== $quest){
 
 	$pergunta_id = $pergunta[0]['id'];
 

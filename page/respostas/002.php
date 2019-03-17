@@ -26,7 +26,7 @@ $dados['resposta'] = '
 <div class="font-weight-semibold mb-1">'.$assistente_nome.' <a href="#"><i title="Ensinar Mais" class="text-success fas fa-plus-circle"></i></a>
 
 </div>
-Certo agora vou responder <b>'.$_POST['send_answer'].'</b> quando me perguntar <b>'.$_POST['send_quest'].'</b>
+Certo agora vou responder <b>'.$_POST['send_answer'].'</b> quando me falar <b>'.$_POST['send_quest'].'</b>
 </div>
 <script type="text/javascript">
 autoScroll();
