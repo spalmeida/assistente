@@ -1,5 +1,3 @@
-
-
 # **Assistente Lilly**
 Lilly é uma assistente pessoal que aprende novos conteúdos conforme o que as pessoas ensinam para ela através de um chat.
 ![alt text](https://worldvisual.com.br/assistente/imagens/001.jpg)
