@@ -4,3 +4,236 @@
 [28-Aug-2019 00:48:43 America/Sao_Paulo] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/world381/public_html/assistente/page/busca_dados.php:6) in /home2/world381/public_html/assistente/page/busca_dados.php on line 122
 [28-Aug-2019 00:48:54 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/busca_dados.php on line 6
 [28-Aug-2019 00:48:54 America/Sao_Paulo] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/world381/public_html/assistente/page/busca_dados.php:6) in /home2/world381/public_html/assistente/page/busca_dados.php on line 122
+[28-Aug-2019 04:17:44 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/send_quest.php on line 5
+[28-Aug-2019 04:21:27 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/send_quest.php on line 5
+[28-Aug-2019 04:23:39 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:23:45 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:25:49 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:26:29 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/busca_dados.php on line 6
+[28-Aug-2019 04:26:52 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:28:15 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:28:20 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:28:24 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:28:28 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:28:38 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asd'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:29:54 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:43:43 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:44:35 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'echo 'teste';'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:44:51 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:09 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:19 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:28 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:33 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:39 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:45 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:49 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:45:52 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:46:00 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:46:04 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:46:50 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:46:55 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:46:59 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:47:03 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oi ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:47:27 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oi " ; ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:47:41 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:47:49 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:47:55 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ae'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:48:23 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ae';'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:48:31 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:48:38 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:48:43 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:48:47 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:48:55 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:49:02 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:49:08 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:49:14 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cabo');'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:49:24 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cabo');'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:49:31 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cabo');'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:49:41 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'cabo');'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:50:38 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:55:41 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:55:49 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:55:54 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:55:57 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'php_info();'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:56:04 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:56:10 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:56:17 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:56:36 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:56:42 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:56:46 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:56:50 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 04:57:30 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/respostas/003.php(14): Connect->select('respostas', 'resposta_name =...')
+#3 /home2/world381/public_html/assistente/page/update_quest.php(19): require_once('/home2/world381...')
+#4 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:57:38 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/respostas/003.php(14): Connect->select('respostas', 'resposta_name =...')
+#3 /home2/world381/public_html/assistente/page/update_quest.php(19): require_once('/home2/world381...')
+#4 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:57:54 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asd''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/respostas/003.php(14): Connect->select('respostas', 'resposta_name =...')
+#3 /home2/world381/public_html/assistente/page/update_quest.php(19): require_once('/home2/world381...')
+#4 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:58:10 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asd'; echo "'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/respostas/003.php(14): Connect->select('respostas', 'resposta_name =...')
+#3 /home2/world381/public_html/assistente/page/update_quest.php(19): require_once('/home2/world381...')
+#4 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 04:58:25 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asd '; echo "'' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/respostas/003.php(14): Connect->select('respostas', 'resposta_name =...')
+#3 /home2/world381/public_html/assistente/page/update_quest.php(19): require_once('/home2/world381...')
+#4 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 05:00:39 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 05:00:45 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''asd "; die(1); $a = ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 05:01:01 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''asd "; die(1); $a = ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 05:01:03 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''asd "; die(1); $a = ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 05:01:09 America/Sao_Paulo] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''asd ; die(1); $a = ''' at line 1 in /home2/world381/public_html/assistente/controller/class/Connect.php:68
+Stack trace:
+#0 /home2/world381/public_html/assistente/controller/class/Connect.php(68): PDOStatement->execute()
+#1 /home2/world381/public_html/assistente/controller/class/Connect.php(91): Connect->Data(Object(PDOStatement), 'fetchAll')
+#2 /home2/world381/public_html/assistente/page/update_quest.php(16): Connect->select('perguntas', 'pergunta_name =...')
+#3 {main}
+  thrown in /home2/world381/public_html/assistente/controller/class/Connect.php on line 68
+[28-Aug-2019 05:01:15 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 05:01:29 America/Sao_Paulo] PHP Notice:  Undefined variable: dados in /home2/world381/public_html/assistente/page/update_quest.php on line 23
+[28-Aug-2019 03:02:03 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function Fetchall() on null in /home2/world381/public_html/assistente/page/perguntas_status.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/world381/public_html/assistente/page/perguntas_status.php on line 3
+[28-Aug-2019 03:02:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function Fetchall() on null in /home2/world381/public_html/assistente/page/perguntas_status.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/world381/public_html/assistente/page/perguntas_status.php on line 3

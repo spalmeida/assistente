@@ -1,0 +1,16 @@
+[28-Aug-2019 02:19:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home2/world381/public_html/assistente/page/respostas/002.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/world381/public_html/assistente/page/respostas/002.php on line 3
+[28-Aug-2019 02:19:49 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function select() on null in /home2/world381/public_html/assistente/page/respostas/003.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/world381/public_html/assistente/page/respostas/003.php on line 3
+[28-Aug-2019 02:26:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function Query() on null in /home2/world381/public_html/assistente/page/respostas/002.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/world381/public_html/assistente/page/respostas/002.php on line 3
+[28-Aug-2019 02:26:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function select() on null in /home2/world381/public_html/assistente/page/respostas/003.php:3
+Stack trace:
+#0 {main}
+  thrown in /home2/world381/public_html/assistente/page/respostas/003.php on line 3

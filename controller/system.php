@@ -12,13 +12,13 @@ function __autoload($class){
 $busca = new Connect($localhost,$db,$user,$pass);
 if(!empty($_SESSION)){
 //DECLARA A ID DO USUÁRIO
-$system_user_id = $_SESSION['user_id'];
+	$system_user_id = $_SESSION['user_id'];
 //DECLARA AS INFORMAÇÕES DO USUÁRIO
-$system_user = $busca->select("system_users", "id = $system_user_id");
+	$system_user = $busca->select("system_users", "id = $system_user_id");
 //DECLARA O TIPO DE PERMISSÃO DO USUÁRIO
-$system_user_permission = $system_user[0]['user_type'];
+	$system_user_permission = $system_user[0]['user_type'];
 //DECLARA AS PERMISSÕES QUE O USUÁRIO TEM
-$system_permission = $busca->select("system_permission", "id = $system_user_permission");
+	$system_permission = $busca->select("system_permission", "id = $system_user_permission");
 }
 //=======================================================================
 $assistente = $busca->select("assistente", "id = 1");
@@ -32,9 +32,9 @@ $assistente = $busca->select("assistente", "id = 1");
 
 //FUNÇÃO UTILIZADA PARA REMOÇÃO DE ACENTOS ==============================
 function RemoveAcento($string){
-$remover_separador = str_replace(" ", "_", $string); 
-$nome = strtolower(preg_replace( '/[`^~\'"]/', null, iconv( 'UTF-8', 'ASCII//TRANSLIT', $remover_separador ) ));
-return $nome;
+	$remover_separador = str_replace(" ", "_", $string); 
+	$nome = strtolower(preg_replace( '/[`^~\'"]/', null, iconv( 'UTF-8', 'ASCII//TRANSLIT', $remover_separador ) ));
+	return $nome;
 }
 //=======================================================================
 
@@ -46,5 +46,24 @@ ini_set('display_errors',1);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
 //=======================================================================
+
+function strip_tags_content($text, $tags = '', $invert = FALSE) { 
+
+	preg_match_all('/<(.+?)[\s]*\/?[\s]*>/si', trim($tags), $tags); 
+	$tags = array_unique($tags[1]); 
+	
+	if(is_array($tags) AND count($tags) > 0) { 
+		if($invert == FALSE) { 
+			return preg_replace('@<(?!(?:'. implode('|', $tags) .')\b)(\w+)\b.*?>.*?</\1>@si', '', $text); 
+		} 
+		else { 
+			return preg_replace('@<('. implode('|', $tags) .')\b.*?>.*?</\1>@si', '', $text); 
+		} 
+	} 
+	elseif($invert == FALSE) { 
+		return preg_replace('@<(\w+)\b.*?>.*?</\1>@si', '', $text); 
+	} 
+	return $text; 
+} 
 
 ?>
