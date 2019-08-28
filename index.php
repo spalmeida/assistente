@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
 require_once("controller/system.php");
 $busca->VerifySession();
@@ -6,6 +5,7 @@ $busca->VerifySession();
 
  ?>
 
+<!DOCTYPE html>
 
 <html lang="en" class="default-style">
 

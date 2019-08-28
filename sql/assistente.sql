@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 02-Jan-2019 às 18:45
--- Versão do servidor: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Host: localhost:3306
+-- Generation Time: 28-Ago-2019 às 02:48
+-- Versão do servidor: 5.6.41-84.1
+-- versão do PHP: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `assistente`
+-- Database: `world381_game`
 --
 
 -- --------------------------------------------------------
@@ -95,7 +95,8 @@ INSERT INTO `perguntas` (`id`, `pergunta_name`, `pergunta_type`, `pergunta_statu
 (28, 'opaopaa', 0, 0, 0, 0, 0),
 (29, 'opaoapoaopa', 0, 0, 1, 0, 0),
 (30, 'opaoapaopaoopa', 0, 0, 1, 1, 0),
-(31, 'opsopsops', 0, 0, 1, 1, 0);
+(31, 'opsopsops', 0, 0, 1, 1, 0),
+(32, 'como vai?', 0, 0, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -148,7 +149,8 @@ INSERT INTO `respostas` (`id`, `resposta_name`, `resposta_pergunta_id`, `respost
 (28, '?', 28, 0, 0, 0, 0),
 (29, '?', 29, 0, 1, 0, 0),
 (30, '?', 30, 0, 1, 1, 0),
-(31, '?', 31, 0, 1, 1, 0);
+(31, '?', 31, 0, 1, 1, 0),
+(32, 'vou ótima e você?', 32, 0, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -184,15 +186,16 @@ CREATE TABLE `system_users` (
   `user_pass` varchar(200) NOT NULL,
   `user_points` int(11) NOT NULL,
   `user_name` varchar(50) NOT NULL,
-  `use_last_name` varchar(400) NOT NULL
+  `use_last_name` varchar(400) NOT NULL,
+  `user_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `system_users`
 --
 
-INSERT INTO `system_users` (`id`, `user_type`, `user_mail`, `user_pass`, `user_points`, `user_name`, `use_last_name`) VALUES
-(1, 1, 'samuelprado.a@gmail.com', 'bfb4b183c326b79d6dbb0623c7e43cd9', 0, 'samuel', 'prado almeida');
+INSERT INTO `system_users` (`id`, `user_type`, `user_mail`, `user_pass`, `user_points`, `user_name`, `use_last_name`, `user_status`) VALUES
+(1, 1, 'samuelprado.a@gmail.com', '0c7540eb7e65b553ec1ba6b20de79608', 0, 'samuel', 'prado almeida', 0);
 
 --
 -- Indexes for dumped tables
@@ -242,13 +245,13 @@ ALTER TABLE `assistente`
 -- AUTO_INCREMENT for table `perguntas`
 --
 ALTER TABLE `perguntas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `respostas`
 --
 ALTER TABLE `respostas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `system_permission`

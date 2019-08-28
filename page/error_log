@@ -1,0 +1,6 @@
+[28-Aug-2019 00:27:58 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/busca_dados.php on line 6
+[28-Aug-2019 00:27:58 America/Sao_Paulo] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/world381/public_html/assistente/page/busca_dados.php:6) in /home2/world381/public_html/assistente/page/busca_dados.php on line 122
+[28-Aug-2019 00:48:43 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/busca_dados.php on line 6
+[28-Aug-2019 00:48:43 America/Sao_Paulo] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/world381/public_html/assistente/page/busca_dados.php:6) in /home2/world381/public_html/assistente/page/busca_dados.php on line 122
+[28-Aug-2019 00:48:54 America/Sao_Paulo] PHP Notice:  Undefined variable: system_user in /home2/world381/public_html/assistente/page/busca_dados.php on line 6
+[28-Aug-2019 00:48:54 America/Sao_Paulo] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/world381/public_html/assistente/page/busca_dados.php:6) in /home2/world381/public_html/assistente/page/busca_dados.php on line 122

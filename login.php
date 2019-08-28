@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<?php 
+<?php
 require_once("controller/system.php");
 $busca->VerifyLogin();
 ?>
 
+<!DOCTYPE html>
 
 <html lang="en" class="default-style">
 

@@ -535,20 +535,23 @@ class Connect{
  **/
  //============================================================================== 
  public function Validation($table, $email, $pass){
- 	session_destroy();
- 	$select = Connect::select($table,"user_mail LIKE '%$email%' AND user_pass LIKE '%$pass%'");
+
+ 	$select = Connect::select($table,"user_mail= '$email' AND user_pass = '$pass'");
  	if(empty($select)){
  		return false;
  	}else{
- 		session_start();
- 		$user_info = Connect::select("system_users", "user_mail LIKE '%$email%'");
- 		$_SESSION['user_id'] = $user_info[0]['id'];
- 		$_SESSION['email'] = $user_info[0]['user_mail'];
- 		$_SESSION['user_name'] = $user_info[0]['user_name'];
- 		$_SESSION['user_last_name'] = $user_info[0]['user_last_name'];
- 		$_SESSION['user_type'] = $user_info[0]['user_type'];
- 		$_SESSION['user_status'] = $user_info[0]['user_status'];
- 		return true;
+ 		$user_info = Connect::select("system_users", "user_mail = '$email'");
+
+ 		$_SESSION = array(
+
+ 			'user_id'=>$user_info[0]['id'],
+ 			'email'=>$user_info[0]['user_mail'],
+ 			'user_name'=>$user_info[0]['user_name'],
+ 			'user_last_name'=>$user_info[0]['use_last_name'],
+ 			'user_type'=>$user_info[0]['user_type'],
+ 			'user_status'=>$user_info[0]['user_status']
+
+ 		);
  	}
 
  }
@@ -660,8 +663,8 @@ class Connect{
  **/
  //==============================================================================
  public function VerifyLogin(){
- 	if($_SESSION){
- 		header("Location: index.php");
+ 	if(!empty($_SESSION)){
+ 		header("Location: home.php");
  	}
  }
 
@@ -677,7 +680,7 @@ class Connect{
  **/
  //==============================================================================
  public function VerifySession(){
- 	if(!$_SESSION){
+ 	if(empty($_SESSION)){
  		header("Location: login.php");
  	}
  }
