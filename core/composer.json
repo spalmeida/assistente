@@ -1,0 +1,17 @@
+{
+    "require": {
+        "monolog/monolog": "^2.0",
+        "nezamy/route": "^1.2"
+    },
+	"autoload": {
+		"psr-4": {
+			"world\\": "modal/"
+		},
+		"files": ["config/const.php"]
+	},
+	"scripts": {
+        "update-assistente": [
+            "@php wScripts.php"
+        ]
+    }
+}
